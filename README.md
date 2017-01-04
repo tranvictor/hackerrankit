@@ -25,7 +25,7 @@ where `[url]` is the url to the problem on Hackerrank.
 After you issue `hackerrankit`, it does the following steps:
 
 1. Silently go to the url to extract information about that problem such as `name`, `sample input`, `sample output`.
-2. Base on the `name`, it creates a directory inside your current working directory whose name equals to the problem's name replaced spaces with `-` character. Example: `ACM ICPC Team` -> `ACM-ICPC-Team`.
+2. Base on the `name`, it creates a directory inside your current working directory whose name equals to the problem's name replaced spaces with `-` character. Example: `ACM ICPC Team` -> `acm-icpc-team`.
 3. Base on the language you specified in the command, it creates minimal necessary files for you to start working on the problem right a way. For example, with `C++`, it creates `main.cpp`, `sample.input`, `sample.out`, and `run.sh` for you to compile your solution, run it with `sample.input` and compare to `sample.output`. Its output is either `Accepted` or `Wrong Answer`.
 4. `hackerrankit` will try its best to initialize your `main.cpp` with useful declarations so you don't need to worry about them everytime you want to practising problem solving. For example: with `C++`, it will have common includes and useful `#define`, `main` function.
 
