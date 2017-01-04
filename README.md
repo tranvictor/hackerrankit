@@ -33,3 +33,8 @@ After you issue `hackerrankit`, it does the following steps:
 This is firstly my gem to make my problem solving practising less time consuming so I will only focus on the language that I use. Currently is `C++`.
 
 If you want to support your preferred language such as `Ruby`, `Python`, `Java`, `C`, `Pascal` whatever. Feel free to folk and make a PR. Or you just want to make it for yourself, feel free to copy the tool. Even nicer if you can give this repository a star which would definitely make my day.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
