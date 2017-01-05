@@ -18,7 +18,9 @@ gem install hackerrankit
 hackerrankit [url] [language]
 ```
 
-where `[url]` is the url to the problem on Hackerrank.
+where:
+
+`[url]` is the url to the problem on Hackerrank.
 
 `language` is the language you are going to solve the problem. To keep this gem simple, I don't consider the situation where you want to solve a problem with more than one language. Default: `C++`.
 
