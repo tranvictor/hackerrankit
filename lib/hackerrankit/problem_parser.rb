@@ -27,11 +27,27 @@ module Hackerrankit
     end
 
     def get_problem_sample_input_from_json
-      doc.css("div.challenge_sample_input_body code").text
+      result = doc.css("div.challenge_sample_input_body code").text
+      if result.strip.size == 0
+        result = doc.css("div.challenge_sample_input_body p").text
+      end
+      if result.strip.size == 0
+        result = doc.xpath('//strong[contains(text(), "Sample Input")]').first
+          .parent.next_element.text
+      end
+      return result
     end
 
     def get_problem_sample_output_from_json
-      doc.css("div.challenge_sample_output_body code").text
+      result = doc.css("div.challenge_sample_output_body code").text
+      if result.strip.size == 0
+        result = doc.css("div.challenge_sample_output_body p").text
+      end
+      if result.strip.size == 0
+        result = doc.xpath('//strong[contains(text(), "Sample Output")]').first
+          .parent.next_element.text
+      end
+      return result
     end
 
     def get_problem_slug(url)
@@ -45,7 +61,9 @@ module Hackerrankit
 
     def doc
       @doc ||= Nokogiri::HTML(
-        @problem_json['model']['body_html'].force_encoding('UTF-8')
+        @problem_json['model']['body_html'].force_encoding('UTF-8').tap do |html|
+          # puts html
+        end
       )
     end
   end
